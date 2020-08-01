@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous">
+    </script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'>
+    <link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+    <div class="ui yellow menu borderless">
+        <div class="orange header item">
+            Google Books Search
+        </div>
+        <a href='/search' class="ui active white item">
+            Search
+        </a>
+        <a href='/saved' class="item">
+           Saved
+        </a>
+    </div>
+    <div style='margin-top: 80px;' class="ui grid">
+        <div class="four wide column"></div>
+        <div class="eight wide column main-content">
+            <h1 style='font-size: 35px;' class='ui header blue'>Search Books</h1>
+            <div style='width: 100%;' class="ui raised segment">
+                <div style='width: 100%;' class="ui large icon input">
+                    <input class='input-field' type="text" placeholder="Search Books...">
+                    <button class="ui search blue icon button">
+                        <i class="search icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column"></div>
+        <div class='sixteen wide column book-area'>
+            <div class='result-counter'></div>
+            <div class='card-area'></div>
+        </div>
+    </div>
+    <script src='./script.js'></script>
+</body>
+</html>
