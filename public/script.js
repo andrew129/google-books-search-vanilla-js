@@ -48,23 +48,22 @@ function createCards(term) {
 
 function createAuthors(authorsArr) {
     let authorsDiv = document.createElement('div')
+    let authors = document.createElement('span')
     let extraContent = ''
     authorsArr.forEach((author, index) => {
-        let authors = document.createElement('span')
         if (authorsArr.length > 1) {
             if (index === authorsArr.length - 1) {
-                extraContent = author
+                extraContent += author
             }
             else {
-                extraContent = author + ',' + ' '
+                extraContent += author + ',' + ' '
             }
-            authors.textContent = 'Author(s): ' + extraContent
-            authorsDiv.appendChild(authors)
         }
         else {
-            authors.textContent = 'Author(s): ' + author
-            authorsDiv.appendChild(authors)
+            extraContent += author
         }
     })
+    authors.textContent = 'Author(s): ' + extraContent
+    authorsDiv.appendChild(authors)
     return authorsDiv
 }
