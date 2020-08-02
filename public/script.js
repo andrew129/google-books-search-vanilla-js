@@ -20,30 +20,36 @@ function createCards(term) {
         newP.textContent = `retrieved ${arrOfBooks.length} books that matched your search`
         resultDiv.appendChild(newP)
         arrOfBooks.forEach(function(book) {
-            let bookCard = document.createElement('div')
-            bookCard.classList.add('ui', 'segment')
-            let bookImageContainer = document.createElement('div')
-            bookImageContainer.classList.add('image')
-            let bookImage = document.createElement('img')
-            bookImage.classList.add('ui', 'small', 'image')
-            bookImage.src = book.volumeInfo.imageLinks.smallThumbnail
+            let cardDiv = createElement('div', ['ui', 'segment'])
+            let bookImageContainer = createElement('div', ['image'])
+            let bookImage = createElement('img', ['ui', 'small', 'image'], { 'src': book.volumeInfo.imageLinks.smallThumbnail })
             bookImageContainer.appendChild(bookImage)
             let contentDiv = document.createElement('div')
-            let header = document.createElement('a')
-            header.classList.add('header')
-            header.href = book.volumeInfo.infoLink
-            header.target = 'blank'
-            header.textContent = book.volumeInfo.title
+            let header = createElement('a', ['header'], { 'href': book.volumeInfo.infoLink, 'target': 'blank', 'textContent': book.volumeInfo.title })
             contentDiv.appendChild(header)
             contentDiv.appendChild(createAuthors(book.volumeInfo.authors))
-            let description = document.createElement('div')
-            description.textContent = book.volumeInfo.description
+            let description = createElement('div', null, {'textContent': book.volumeInfo.description})
             contentDiv.appendChild(description)
-            bookCard.appendChild(bookImageContainer)
-            bookCard.appendChild(contentDiv)
-            cardArea.appendChild(bookCard)
+            cardDiv.appendChild(bookImageContainer)
+            cardDiv.appendChild(contentDiv)
+            cardArea.appendChild(cardDiv)
         })
     })
+}
+
+function createElement(element, classNames, propertyObj) {
+    let newElement = document.createElement(element)
+    if (classNames) {
+        classNames.forEach(className => {
+            newElement.classList.add(className)
+        })
+    }
+    if (propertyObj) {
+        for (key in propertyObj) {
+            newElement[key] = propertyObj[key]
+        }
+    }
+    return newElement
 }
 
 function createAuthors(authorsArr) {
@@ -67,3 +73,5 @@ function createAuthors(authorsArr) {
     authorsDiv.appendChild(authors)
     return authorsDiv
 }
+
+// 91 lines before function
