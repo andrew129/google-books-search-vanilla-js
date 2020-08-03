@@ -30,11 +30,21 @@ function createCards(term) {
             contentDiv.appendChild(createAuthors(book.volumeInfo.authors))
             let description = helper.createElement('div', null, {'textContent': book.volumeInfo.description})
             contentDiv.appendChild(description)
+            let saveBtn = helper.createElement('button', ['blue', 'ui', 'save', 'icon', 'button'], {'textContent': 'Save Book ', 'id': book.id})
+            let saveIcon = helper.createElement('i', ['save', 'icon'])
+            saveBtn.addEventListener('click', function() { saveBook(event.target.getAttribute('id'), arrOfBooks )})
+            saveBtn.appendChild(saveIcon)
             cardDiv.appendChild(bookImageContainer)
             cardDiv.appendChild(contentDiv)
+            cardDiv.appendChild(saveBtn)
             cardArea.appendChild(cardDiv)
         })
     })
+}
+
+function saveBook(id, bookArr) {
+    const savedBook = bookArr.find(book => book.id === id)
+    helper.saveBook(savedBook)
 }
 
 function createAuthors(authorsArr) {

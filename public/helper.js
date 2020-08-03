@@ -12,5 +12,23 @@ const helper = {
             }
         }
         return newElement
+    },
+    saveBook(book) {
+        fetch("/api/savebook", { 
+      
+            method: "POST", 
+      
+            body: JSON.stringify({ 
+                title: book.volumeInfo.title, 
+                authors: book.volumeInfo.authors,
+                description: book.volumeInfo.description,
+                imagePath: book.volumeInfo.imageLinks.smallThumbnail,
+                bookLink: book.volumeInfo.infoLink
+            }), 
+      
+            headers: { 
+                "Content-type": "application/json; charset=UTF-8"
+            } 
+        }).then(res => console.log(res))
     }
 }

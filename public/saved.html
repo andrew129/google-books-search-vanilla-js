@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'>
+    <link rel="stylesheet" href="./saved.css">
+</head>
+<body>
+    <div class="ui yellow menu borderless">
+        <div class="orange header item">
+            Google Books Search
+        </div>
+        <a href='/search' class="ui active white item">
+            Search
+        </a>
+        <a href='/saved' class="item">
+            Saved
+        </a>
+    </div>
+    <div style='margin-top: 60px;' class='ui grid'>
+        <div class='one wide column'></div>
+        <div style='border-bottom: solid 1px black;' class="fourteen wide column main-content">
+            <h1 class='ui header blue'>My Book Collection</h1>
+        </div>
+        <div class='one wide column'></div>
+        <div class='one wide column'></div>
+        <div class='fourteen wide column book-area'>
+        </div>
+        <div class='one wide column'></div>
+    </div>
+    <script src='./helper.js'></script>
+    <script src='./saved.js'></script>
+</body>
+</html>
