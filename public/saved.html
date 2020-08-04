@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous">
+    </script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'>
     <link rel="stylesheet" href="./saved.css">
 </head>
 <body>
     <div class="ui yellow menu borderless">
-        <div class="orange header item">
+        <div style='margin-bottom: 0 !important;' class="ui header item">
             Google Books Search
         </div>
-        <a href='/search' class="ui active white item">
+        <a href='/search' class="ui white item nav-link">
             Search
         </a>
-        <a href='/saved' class="item">
-            Saved
+        <a href='/saved' class="ui active item nav-link">
+            My Collection
         </a>
     </div>
     <div style='margin-top: 60px;' class='ui grid'>

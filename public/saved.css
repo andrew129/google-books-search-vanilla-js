@@ -1,6 +1,7 @@
-div.menu {
+.menu {
     background-image: linear-gradient(37deg, rgb(32, 218, 233),rgb(40, 21, 236)) !important;
     color: white;
+    max-height: 53.41px;
 }
 
 .item {
@@ -8,9 +9,9 @@ div.menu {
     font-size: 15px;
 }
 
-.header {
+/* .header {
     font-size: 18px;
-}
+} */
 
 .main-content {
     display: flex;
