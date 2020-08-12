@@ -14,10 +14,8 @@ function createCards(term) {
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${term}`)
     .then(res => res.json())
     .then(function(data) {
-        console.log(data)
         let arrOfBooks = data.items
         let newP = document.createElement('p')
-        console.log(arrOfBooks.length)
         newP.textContent = `retrieved ${arrOfBooks.length} books that matched your search`
         resultDiv.appendChild(newP)
         arrOfBooks.forEach(function(book) {
@@ -64,7 +62,6 @@ function createBookMessage(name, cardDiv, book, arrOfBooks) {
 
 function saveBook(id, bookArr, cardDiv) {
     let saveBtn = document.querySelectorAll('.save')
-    console.log(saveBtn)
     saveBtn.forEach(btn => {
         if (btn.getAttribute('id') === id) {
             btn.parentNode.removeChild(btn)
