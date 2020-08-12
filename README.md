@@ -7,3 +7,13 @@
 ## Preview
 
 ![image](https://github.com/andrew129/google-books-search-vanilla-js/blob/master/screenshots/google-books.png?raw=true)
+
+## Technologies Used
+
+- HTML
+- CSS
+- Vanilla JS
+- NodeJS
+- Express
+- Mongoose
+- Semantic UI
