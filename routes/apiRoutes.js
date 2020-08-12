@@ -27,4 +27,13 @@ router.get('/api/savebook', function(req, res) {
         })
 })
 
+router.delete('/api/savebook/:id', function(req, res) {
+    console.log(req.params.id)
+    db.Book.findByIdAndRemove(req.params.id)
+        .then(dbBook => {
+            res.json(dbBook)
+        })
+        .catch(err => res.json(err.message))
+})
+
 module.exports = router;
