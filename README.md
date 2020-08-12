@@ -6,4 +6,4 @@
 
 ## Preview
 
-![Preview](https://github.com/andrew129/React-Trivia-Final/blob/master/images/google-books.png?raw=true)
+![Preview](https://github.com/andrew129/React-Trivia-Final/blob/master/public/images/google-books.png?raw=true)
