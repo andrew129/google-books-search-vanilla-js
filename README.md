@@ -2,7 +2,7 @@
 
 ## About
 
-- Challenging my self to build a full stack app with vanilla javascript.  You can view, and save your favorite books using this app
+Challenging my self to build a full stack app with vanilla javascript.  You can view, and save your favorite books using this app
 
 ## Preview
 
