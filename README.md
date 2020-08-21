@@ -17,3 +17,7 @@ Challenging my self to build a full stack app with vanilla javascript.  You can 
 - Express
 - Mongoose
 - Semantic UI
+
+## Authors
+
+- Andrew Stiles
